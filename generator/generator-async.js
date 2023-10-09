@@ -8,6 +8,9 @@ function* testGenerator(){
 const test = testGenerator()
 test.next().value.then((res) => {
   console.log(res);
+  return test.next().value
+}).then((res)=> {
+  console.log(res);
 })
 
 
